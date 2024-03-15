@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Pond Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dynamic-theme.css') }}"> <!-- Updated to dynamic-theme.css -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Solar Pond Calculator</h1>
+        </div>
+    </header>
+    <section class="content">
+        <div class="container">
+            <form action="/" method="post">
+                <div class="form-group">
+                    <label for="city">City Name:</label>
+                    <input type="text" id="city" name="city" placeholder="Enter city name" required>
+                </div>
+                <button type="submit">Get Information</button>
+            </form>
+            {% if temperature %}
+            <div class="temperature-info">
+                <h2>Current Temperature in {{ city }}</h2>
+                <p>Temperature: {{ temperature }}°C</p>
+                <p>Humidity: {{ humidity }}%</p>
+                <p>Wind Speed: {{ wind_speed }} m/s</p>
+            </div>
+            <div class="pond-dimensions">
+                <h2>Solar Pond Dimensions</h2>
+                <p>Length: {{ length }} meters</p>
+                <p>Width: {{ width }} meters</p>
+                <p>Depth: {{ depth }} meters</p>
+            </div>
+            {% elif error %}
+            <div class="error">
+                <p>{{ error }}</p>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; {{ current_year }} Solar Pond Calculator </p>
+                 Developed by Mr. PAWAR PRATHAMESH SANJAY (55), Mr. BUDRUK ROHIT SHITAL (18), Mr. CHAVAN BHUSHAN SAYAJI (19), Mr. KAVACHALE SANCHIT M (30), Mr. BHOSALE AARYA DEEPAK (15) </p>
+        </div>
+    </footer>
+</body>
+</html>

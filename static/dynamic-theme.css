@@ -1,0 +1,96 @@
+/* dynamic-theme.css */
+
+body {
+    background: linear-gradient(135deg, #eeebeb, #d498d4); /* Gradient dark background */
+    color: #0d0101; /* White text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(135deg, #f498e0, #e40d0d); /* Gradient dark header */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Header shadow */
+}
+
+header h1 {
+    text-align: center;
+    font-size: 36px;
+    margin: 0;
+}
+
+.content {
+    padding: 50px 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    padding: 15px;
+    border-radius: 25px;
+    border: 2px solid transparent; /* Transparent border */
+    background-image: linear-gradient(135deg, #e59ad2, #ddf585); /* Gradient dark border */
+    width: 100%;
+    transition: border-color 0.3s; /* Smooth transition for input */
+}
+
+input[type="text"]:focus {
+    border-color: #00ced1; /* Lighter turquoise border on focus */
+}
+
+button {
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #e82608, #ea07a6); /* Gradient dark button */
+    color: #ffffff;
+    border: 2px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    outline:none; /* Remove outline on focus */
+}
+
+button:hover {
+    background: linear-gradient(135deg, #e7dc0b, #08efb9); /* Gradient lighter button on hover */
+    transform: scale(1.05); /* Increase size on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Button shadow on hover */
+}
+
+.temperature-info, .pond-dimensions, .error {
+    background: linear-gradient(135deg, #efa2f6, #9ed3ea); /* Gradient result sections */
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Result sections shadow */
+}
+
+.temperature-info h2, .pond-dimensions h2, .error p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+footer {
+    background: linear-gradient(135deg, #f7f5f5, #0807073c); /* Gradient dark footer */
+    color: #0a0a0a;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 -2px 4px #f7f6f6; /* Footer shadow */
+}
